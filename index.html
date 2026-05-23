@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<title>شركة السيف العقارية – منزل أحلامك يبدأ هنا</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+
+
+body {
+
+font-family: 'Cairo', sans-serif;
+
+background-color: #ffffff;
+
+color: #1e2a3a;
+
+line-height: 1.6;
+
+}
+
+
+
+html {
+
+scroll-behavior: smooth;
+
+}
+
+
+
+.navbar {
+
+background-color: rgba(255, 255, 255, 0.95);
+
+backdrop-filter: blur(10px);
+
+box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+
+padding: 15px 5%;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+position: sticky;
+
+top: 0;
+
+z-index: 1000;
+
+}
+
+
+
+.logo {
+
+font-size: 26px;
+
+font-weight: 800;
+
+color: #c49a6c;
+
+}
+
+
+
+.logo span {
+
+color: #1e2a3a;
+
+}
+
+
+
+.nav-links {
+
+display: flex;
+
+list-style: none;
+
+gap: 30px;
+
+}
+
+
+
+.nav-links a {
+
+text-decoration: none;
+
+color: #1e2a3a;
+
+font-weight: 600;
+
+transition: color 0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+color: #c49a6c;
+
+}
+
+
+
+.hero {
+
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+
+background-size: cover;
+
+background-position: center;
+
+background-attachment: fixed;
+
+height: 85vh;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+text-align: center;
+
+color: white;
+
+}
+
+
+
+.hero-content h1 {
+
+font-size: 52px;
+
+margin-bottom: 20px;
+
+font-weight: 800;
+
+}
+
+
+
+.hero-content p {
+
+font-size: 20px;
+
+margin-bottom: 30px;
+
+}
+
+
+
+.hero-buttons {
+
+display: flex;
+
+gap: 15px;
+
+justify-content: center;
+
+}
+
+
+
+.hero-btn {
+
+background-color: #c49a6c;
+
+color: white;
+
+padding: 12px 28px;
+
+border: none;
+
+border-radius: 40px;
+
+font-size: 18px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+
+
+.hero-btn-outline {
+
+background-color: transparent;
+
+border: 2px solid white;
+
+color: white;
+
+}
+
+
+
+.hero-btn-outline:hover {
+
+background-color: white;
+
+color: #1e2a3a;
+
+}
+
+
+
+.hero-btn:hover {
+
+background-color: #a87b4f;
+
+transform: scale(1.02);
+
+}
+
+
+
+.section {
+
+padding: 80px 5%;
+
+}
+
+
+
+.section-title {
+
+text-align: center;
+
+font-size: 36px;
+
+margin-bottom: 50px;
+
+color: #1e2a3a;
+
+font-weight: 700;
+
+}
+
+
+
+.section-title span {
+
+color: #c49a6c;
+
+}
+
+
+
+.about-content {
+
+max-width: 800px;
+
+margin: auto;
+
+text-align: center;
+
+font-size: 18px;
+
+color: #4a5568;
+
+}
+
+
+
+.stats {
+
+display: flex;
+
+justify-content: center;
+
+gap: 50px;
+
+margin-top: 40px;
+
+flex-wrap: wrap;
+
+}
+
+.stat-item {
+
+text-align: center;
+
+background: #f8f5f0;
+
+padding: 20px 35px;
+
+border-radius: 20px;
+
+}
+
+.stat-number {
+
+font-size: 42px;
+
+color: #c49a6c;
+
+font-weight: 800;
+
+}
+
+
+
+.filters {
+
+text-align: center;
+
+margin-bottom: 40px;
+
+}
+
+.filter-btn {
+
+background: #f0f0f0;
+
+border: none;
+
+padding: 10px 24px;
+
+margin: 5px;
+
+border-radius: 40px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+.filter-btn.active, .filter-btn:hover {
+
+background: #c49a6c;
+
+color: white;
+
+}
+
+
+
+.properties-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+gap: 35px;
+
+margin-top: 20px;
+
+}
+
+
+
+.property-card {
+
+background: #fff;
+
+border-radius: 20px;
+
+overflow: hidden;
+
+box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+transition: all 0.3s ease;
+
+}
+
+
+
+.property-card:hover {
+
+transform: translateY(-12px);
+
+box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+
+}
+
+
+
+.property-img {
+
+height: 220px;
+
+background-size: cover;
+
+background-position: center;
+
+transition: transform 0.5s ease;
+
+}
+
+
+
+.property-card:hover .property-img {
+
+transform: scale(1.02);
+
+}
+
+
+
+.property-info {
+
+padding: 22px;
+
+}
+
+
+
+.property-info h3 {
+
+font-size: 20px;
+
+margin-bottom: 8px;
+
+font-weight: 700;
+
+}
+
+
+
+.location, .price {
+
+font-size: 14px;
+
+color: #4a5568;
+
+margin: 5px 0;
+
+}
+
+
+
+.price {
+
+font-weight: 800;
+
+color: #c49a6c;
+
+font-size: 18px;
+
+}
+
+
+
+.buttons-group {
+
+display: flex;
+
+gap: 10px;
+
+margin-top: 15px;
+
+}
+
+.details-btn, .quick-view-btn {
+
+flex: 1;
+
+background: none;
+
+border: 2px solid #c49a6c;
+
+padding: 8px 0;
+
+border-radius: 40px;
+
+color: #c49a6c;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+font-weight: 600;
+
+}
+
+.quick-view-btn {
+
+background: #c49a6c;
+
+color: white;
+
+}
+
+.quick-view-btn:hover {
+
+background: #a87b4f;
+
+border-color: #a87b4f;
+
+}
+
+.details-btn:hover {
+
+background: #c49a6c;
+
+color: white;
+
+}
+
+
+
+.services-grid {
+
+display: flex;
+
+justify-content: center;
+
+gap: 30px;
+
+flex-wrap: wrap;
+
+}
+
+
+
+.service-card {
+
+background: #f8f5f0;
+
+padding: 35px 25px;
+
+border-radius: 20px;
+
+width: 280px;
+
+text-align: center;
+
+transition: 0.3s;
+
+}
+
+
+
+.service-card:hover {
+
+transform: translateY(-8px);
+
+background: #ffffff;
+
+box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+
+}
+
+
+
+.service-card i {
+
+font-size: 45px;
+
+color: #c49a6c;
+
+margin-bottom: 20px;
+
+}
+
+
+
+.testimonials-grid {
+
+display: flex;
+
+justify-content: center;
+
+gap: 30px;
+
+flex-wrap: wrap;
+
+}
+
+
+
+.testimonial-card {
+
+background: #ffffff;
+
+padding: 30px;
+
+border-radius: 20px;
+
+width: 320px;
+
+text-align: center;
+
+box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+
+border: 1px solid #f0f0f0;
+
+transition: 0.3s;
+
+}
+
+
+
+.testimonial-card:hover {
+
+transform: translateY(-5px);
+
+box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.contact-form {
+
+max-width: 550px;
+
+margin: auto;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 20px;
+
+}
+
+
+
+.contact-form input, .contact-form textarea {
+
+padding: 14px;
+
+border: 1px solid #e2e8f0;
+
+border-radius: 12px;
+
+font-family: inherit;
+
+font-size: 16px;
+
+transition: 0.3s;
+
+}
+
+
+
+.contact-form input:focus, .contact-form textarea:focus {
+
+border-color: #c49a6c;
+
+outline: none;
+
+box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.1);
+
+}
+
+
+
+.contact-form button {
+
+background: #c49a6c;
+
+color: white;
+
+padding: 14px;
+
+border: none;
+
+border-radius: 40px;
+
+font-weight: 700;
+
+font-size: 16px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+
+
+.contact-form button:hover {
+
+background: #a87b4f;
+
+}
+
+
+
+.contact-info {
+
+text-align: center;
+
+margin-top: 40px;
+
+padding-top: 30px;
+
+border-top: 1px solid #e2e8f0;
+
+}
+
+
+
+.contact-info h3 {
+
+margin-bottom: 20px;
+
+color: #1e2a3a;
+
+}
+
+
+
+.contact-info .info-links {
+
+display: flex;
+
+justify-content: center;
+
+gap: 30px;
+
+flex-wrap: wrap;
+
+}
+
+
+
+.contact-info .info-links div {
+
+background: #f8f5f0;
+
+padding: 12px 20px;
+
+border-radius: 50px;
+
+}
+
+
+
+.contact-info .info-links a {
+
+text-decoration: none;
+
+color: #1e2a3a;
+
+}
+
+
+
+.contact-hours {
+
+text-align: center;
+
+margin-top: 25px;
+
+font-size: 14px;
+
+color: #4a5568;
+
+}
+
+
+
+footer {
+
+background: #1e2a3a;
+
+color: white;
+
+text-align: center;
+
+padding: 40px 20px 25px;
+
+}
+
+
+
+.footer-social a {
+
+color: white;
+
+font-size: 22px;
+
+margin: 0 12px;
+
+transition: 0.3s;
+
+display: inline-block;
+
+}
+
+
+
+.footer-social a:hover {
+
+color: #c49a6c;
+
+transform: translateY(-3px);
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.navbar {
+
+flex-direction: column;
+
+gap: 12px;
+
+padding: 12px 5%;
+
+}
+
+.hero-content h1 {
+
+font-size: 32px;
+
+}
+
+.hero-content p {
+
+font-size: 16px;
+
+}
+
+.hero-buttons {
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+.section-title {
+
+font-size: 28px;
+
+}
+
+.buttons-group {
+
+flex-direction: column;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<nav class="navbar">
+
+<div class="logo">شركة <span>السيف العقارية</span></div>
+
+<ul class="nav-links">
+
+<li><a href="#">الرئيسية</a></li>
+
+<li><a href="#about">من نحن</a></li>
+
+<li><a href="#properties">عقارات</a></li>
+
+<li><a href="#services">خدمات</a></li>
+
+<li><a href="#contact">اتصل بنا</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>اعثر على منزل أحلامك اليوم</h1>
+
+<p>أرقى العقارات في أفضل مواقع القاهرة والجونة والساحل الشمالي</p>
+
+<div class="hero-buttons">
+
+<button class="hero-btn" onclick="document.getElementById('properties').scrollIntoView({behavior: 'smooth'})">تصفح العقارات</button>
+
+<button class="hero-btn hero-btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">اتصل بنا</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="about" class="section">
+
+<h2 class="section-title"><span>من نحن</span></h2>
+
+<div class="about-content">
+
+<p>شركة السيف العقارية بخبرة تزيد عن 20 عاماً، نقدم لعملائنا أفضل الخيارات السكنية والاستثمارية في مصر. نتميز بالشفافية والاحترافية ونسعى لتحقيق حلم كل عميل في الحصول على منزل الأحلام.</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-item"><div class="stat-number" id="happyClients">0</div><div>عميل سعيد</div></div>
+
+<div class="stat-item"><div class="stat-number" id="propertiesSold">0</div><div>عقار تم بيعه</div></div>
+
+<div class="stat-item"><div class="stat-number" id="years">0</div><div>سنة خبرة</div></div>
+
+</div>
+
+</section>
+
+
+
+<section id="properties" class="section" style="background-color: #fcfaf7;">
+
+<h2 class="section-title"><span>عقارات</span> مميزة</h2>
+
+<div class="filters">
+
+<button class="filter-btn active" data-filter="all">الكل</button>
+
+<button class="filter-btn" data-filter="شقة">شقق</button>
+
+<button class="filter-btn" data-filter="فيلا">فلل</button>
+
+<button class="filter-btn" data-filter="شاليه">شاليهات</button>
+
+</div>
+
+<div class="properties-grid">
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600');"></div>
+
+<div class="property-info">
+
+<h3>شقة فاخرة</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> القاهرة الجديدة</p>
+
+<p class="price">3,500,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600');"></div>
+
+<div class="property-info">
+
+<h3>فيلا مستقلة</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> الشيخ زايد</p>
+
+<p class="price">8,000,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600');"></div>
+
+<div class="property-info">
+
+<h3>شاليه</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> الساحل الشمالي</p>
+
+<p class="price">5,500,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600');"></div>
+
+<div class="property-info">
+
+<h3>دوبلكس</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> التجمع الخامس</p>
+
+<p class="price">4,200,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?w=600');"></div>
+
+<div class="property-info">
+
+<h3>تاون هاوس</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> كمبوند جولف فيو</p>
+
+<p class="price">6,200,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="property-card">
+
+<div class="property-img" style="background-image: url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600');"></div>
+
+<div class="property-info">
+
+<h3>بنتهاوس - مطلة على النيل</h3>
+
+<p class="location"><i class="fas fa-map-marker-alt"></i> الزمالك</p>
+
+<p class="price">12,500,000 جنيه</p>
+
+<div class="buttons-group">
+
+<button class="quick-view-btn">طلب معاينة</button>
+
+<button class="details-btn">عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="services" class="section">
+
+<h2 class="section-title"><span>خدماتنا</span> المتميزة</h2>
+
+<div class="services-grid">
+
+<div class="service-card"><i class="fas fa-home"></i><h3>بيع العقارات</h3><p>نساعدك في تسويق وبيع عقارك بأفضل سعر وبأسرع وقت</p></div>
+
+<div class="service-card"><i class="fas fa-handshake"></i><h3>شراء العقارات</h3><p>نوفر لك أفضل العروض العقارية المناسبة لاحتياجاتك وميزانيتك</p></div>
+
+<div class="service-card"><i class="fas fa-chart-line"></i><h3>استشارات عقارية</h3><p>فريق من الخبراء يقدم لك الاستشارات المجانية</p></div>
+
+</div>
+
+</section>
+
+
+
+<section id="testimonials" class="section" style="background-color: #fcfaf7;">
+
+<h2 class="section-title"><span>آراء</span> عملائنا</h2>
+
+<div class="testimonials-grid">
+
+<div class="testimonial-card"><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><p style="margin: 15px 0;">"تعاملت مع شركة السيف وكانت تجربة رائعة. ساعدوني في العثور على فيلا أحلامي."</p><h4 style="color: #c49a6c;">- أحمد فتحي</h4></div>
+
+<div class="testimonial-card"><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><p style="margin: 15px 0;">"احترافية في التعامل ودقة في المواعيد. أنصح بالتعامل معهم لأي شخص يبحث عن عقار."</p><h4 style="color: #c49a6c;">- منى سامي</h4></div>
+
+<div class="testimonial-card"><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><i class="fas fa-star" style="color: #f1c40f;"></i><p style="margin: 15px 0;">"شاليه رائع في الساحل الشمالي بفضل خبراء شركة السيف. شكراً لكم."</p><h4 style="color: #c49a6c;">- كريم مصطفى</h4></div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="section">
+
+<h2 class="section-title"><span>اتصل</span> بنا</h2>
+
+<form class="contact-form" id="contactForm" action="https://formspree.io/f/mdkndlap" method="POST">
+
+<input type="text" name="name" placeholder="الاسم بالكامل" required>
+
+<input type="email" name="email" placeholder="البريد الإلكتروني" required>
+
+<textarea name="message" id="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+<button type="submit">إرسال الرسالة</button>
+
+</form>
+
+
+
+<div class="contact-info">
+
+<h3>أو تواصل مباشرة</h3>
+
+<div class="info-links">
+
+<div><i class="fas fa-envelope" style="color: #c49a6c;"></i> <a href="mailto:bh8892138@gmail.com">bh8892138@gmail.com</a></div>
+
+<div><i class="fab fa-whatsapp" style="color: #25D366;"></i> <a href="https://wa.me/201044361065">01044361065</a></div>
+
+<div><i class="fab fa-linkedin-in" style="color: #0077b5;"></i> <a href="https://www.linkedin.com/in/basant-hany-95269b391/" target="_blank">LinkedIn</a></div>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-hours">
+
+<i class="far fa-clock"></i> متاحة للرد: السبت - الخميس (10ص - 8م)
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<div class="footer-social">
+
+<a href="https://www.linkedin.com/in/basant-hany-95269b391/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="mailto:bh8892138@gmail.com"><i class="fas fa-envelope"></i></a>
+
+<a href="https://wa.me/201044361065" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+<p style="margin-top: 20px;">© 2025 شركة السيف العقارية – جميع الحقوق محفوظة. تصميم وتطوير بسنت</p>
+
+</footer>
+
+
+
+<script>
+
+// Smooth scroll
+
+document.querySelectorAll('.nav-links a, .hero-btn').forEach(anchor => {
+
+anchor.addEventListener('click', function(e) {
+
+const targetId = this.getAttribute('href');
+
+if (targetId && targetId !== '#' && targetId !== '') {
+
+const target = document.querySelector(targetId);
+
+if (target) {
+
+e.preventDefault();
+
+target.scrollIntoView({ behavior: 'smooth' });
+
+}
+
+}
+
+});
+
+});
+
+
+
+// Counters
+
+function startCounter() {
+
+let clients = 0, props = 0, yrs = 0;
+
+const targetClients = 520, targetProps = 380, targetYears = 20;
+
+const interval = setInterval(() => {
+
+if (clients < targetClients) { clients += Math.ceil(targetClients / 50); document.getElementById('happyClients').innerText = clients; }
+
+if (props < targetProps) { props += Math.ceil(targetProps / 50); document.getElementById('propertiesSold').innerText = props; }
+
+if (yrs < targetYears) { yrs++; document.getElementById('years').innerText = yrs; }
+
+if (clients >= targetClients && props >= targetProps && yrs >= targetYears) clearInterval(interval);
+
+}, 40);
+
+}
+
+window.addEventListener('load', startCounter);
+
+
+
+// Filtering
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+const propertyCards = document.querySelectorAll('.property-card');
+
+filterBtns.forEach(btn => {
+
+btn.addEventListener('click', () => {
+
+filterBtns.forEach(b => b.classList.remove('active'));
+
+btn.classList.add('active');
+
+const filter = btn.getAttribute('data-filter');
+
+propertyCards.forEach(card => {
+
+const title = card.querySelector('h3').innerText;
+
+if (filter === 'all' || title.includes(filter)) card.style.display = 'block';
+
+else card.style.display = 'none';
+
+});
+
+});
+
+});
+
+
+
+// Quick View & Details buttons
+
+document.querySelectorAll('.quick-view-btn').forEach(btn => {
+
+btn.addEventListener('click', function() {
+
+const card = this.closest('.property-card');
+
+const title = card.querySelector('h3').innerText;
+
+const messageField = document.getElementById('message');
+
+if (messageField) messageField.value = `معاينة عقار "${title}" – الرجاء التواصل لتحديد موعد`;
+
+document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
+});
+
+});
+
+document.querySelectorAll('.details-btn').forEach(btn => {
+
+btn.addEventListener('click', function() {
+
+const card = this.closest('.property-card');
+
+const title = card.querySelector('h3').innerText;
+
+const messageField = document.getElementById('message');
+
+if (messageField) messageField.value = `أود الاستفسار عن تفاصيل "${title}"`;
+
+document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html> 
